@@ -1,0 +1,14 @@
+{
+  "model": "claude-opus-4-6",
+  "permissions": {
+    "allow": [
+      "WebSearch(*)",
+      "WebFetch(*)",
+      "mcp__sequential-thinking__sequentialthinking(*)"
+    ]
+  },
+  "env": {
+    "RESEARCHER_REGION": "Brazil",
+    "RESEARCHER_LANGUAGE": "Portuguese"
+  }
+}
