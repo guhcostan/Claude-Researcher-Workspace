@@ -55,6 +55,7 @@ Structured output
 ├── CLAUDE.md                            # Main config, imports rules
 ├── .claude/
 │   ├── settings.json                    # Model, permissions, env vars
+│   ├── settings.local.json              # Local MCP/tool permission overrides
 │   ├── rules/
 │   │   └── research-workflow.md         # Detailed research workflow rules
 │   ├── agents/
@@ -87,7 +88,7 @@ on source hierarchy, search strategy, and output structure.
 
 1. **Install Claude Code:**
    ```bash
-   npm install -g @anthropic/claude-code
+   npm install -g @anthropic-ai/claude-code
    ```
 
 2. **Clone this repo:**
@@ -115,8 +116,7 @@ on source hierarchy, search strategy, and output structure.
 
 Edit `CLAUDE.md` to add your default region, language, or recurring research categories.
 
-Edit `.claude/settings.json` to change the model or add MCP servers
-(e.g., a Brave Search MCP for higher-quality search results).
+Edit `.claude/settings.json` to change the model (default: `claude-opus-4-6`), update `env` defaults (`RESEARCHER_REGION`: `"Brazil"`, `RESEARCHER_LANGUAGE`: `"Portuguese"`), or configure allowed tools and MCP servers (by default `WebSearch(*)`, `WebFetch(*)`, and `mcp__sequential-thinking__sequentialthinking(*)` are permitted; `.claude/settings.local.json` adds local `mcp__memory__*` permissions).
 
 ## License
 
